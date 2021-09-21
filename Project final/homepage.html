@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <style>
+            .wrapper
+            {
+                overflow: hidden;
+                background-color: skyblue;
+                margin-top: 20px;
+            }
+            .wrapper a
+            {
+                float: left;
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .wrapper input[type=text]
+            {
+                float: right;
+                margin-right: 16px;
+                margin-top: 8px;
+                height: 30px;
+                font-size: 18px;
+                border: none;
+            }
+            .wrapper a:hover
+            {
+                background-color: gray;
+                color: rgb(235, 232, 46);
+            }
+            #con{
+                width: 900px;
+                height: 30px;
+                color: blue;
+                border: none;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: rgb(238, 87, 193);
+                font-size: 17px;
+                text-align: center;
+            }
+            .Welcome
+            {
+                width: 900px;
+                height: 50px;
+                background-color: rgb(238, 87, 193);
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 40px;
+                font-family: fantasy;
+            }
+            #display2,#display3,#display4,#display5,#display6
+            {
+                display: none;
+            }
+            .display
+            {
+                width: 1280px;
+                height: 400px;
+                border: 1px solid black;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .sa1
+            {
+                width: 200px;
+                height: 380px;
+                border: 1px solid black;
+            }
+            .img
+            {
+                width: 100%;
+                height: 80%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Welcome">Welcome to Women's Fashion!!!</div>
+        <div id="con"></div>
+        <script>
+            i=0;
+            myText="Welcome to our site! There are few offers here to you. Please checkout our storage site for more information";
+            var sequence=setInterval(update,200);
+            
+            function update()
+            {
+                i++;
+                if(i>myText.length)
+                {
+                    i=0;
+                }
+                marqueeText=myText.substring(i,myText.length);
+                marqueeText+="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                marqueeText+=myText.substring(0,i);
+                document.getElementById("con").innerHTML=marqueeText;
+            }
+        </script>
+        <div class="wrapper">
+            <a href="#saree" id="saree" onclick="show1()">Saree</a>
+            <a href="#Kurtis.html" id="kurtis" onclick="show2()">Kurtis</a>
+            <a href="#westernwear" id="westernwear" onclick="show3()">Western Wear</a>
+            <a href="#fashionwear" id="fashionwear" onclick="show4()">Fashion Wear</a>
+            <a href="#jewellery" id="jewellery" onclick="show5()">Jewellery</a>
+            <a href="#cosmetics" id="cosmetics" onclick="show6()">Cosmetics</a>
+            <input id="search" type="text" onkeyup="myfunction()" placeholder="Search....">
+        </div>
+        <!-- this is for saree -->
+        <div class="display" id="display1">
+            <div class="sa1" id="sa1" value="800" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/1stsimg.jpg" class="img">Silk Cotton &nbsp;&nbsp;&#8377;800<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/2ndsimg.jpg" class="img">Nylon Fabric &nbsp;&nbsp;&#8377;500<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/3rdsimg.jpg" class="img">Pure Silk &nbsp;&nbsp;&#8377;20000<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/4thsimg.jpg" class="img">Cotton &nbsp;&nbsp;&#8377;999<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/5thsimg.jpg" class="img">Raw Silk &nbsp;&nbsp;&#8377;1500<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/6thsimg.jpg" class="img">Satin Silk &nbsp;&nbsp;&#8377;1200<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <!-- This is for kurtis-->
+        <div class="display" id="display2">
+            <div class="sa1" value="sa1" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/1stkuimg.jpg" class="img">Crop Top &nbsp;&nbsp;&#8377;500<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/2ndkuimg.jpg" class="img">Length Top &nbsp;&nbsp;&#8377;700<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/3rdkuimg.jpg" class="img">Pallazzo &nbsp;&nbsp;&#8377;799<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/4thkuimg.jpg" class="img">Kurti &nbsp;&nbsp;&#8377;500<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/5thkuimg.jpg" class="img">Cotton Chudi &nbsp;&nbsp;&#8377;400<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/6thkuimg.jpg" class="img">Party Wear &nbsp;&nbsp;&#8377;999<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <!-- this is for westernwear -->
+        <div class="display" id="display3">
+            <div class="sa1" value="sa1" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/1stwimg.jpg" class="img">Frock &nbsp;&nbsp;&#8377;499<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/2ndwimg.jpeg" class="img">Full Suit &nbsp;&nbsp;&#8377;699<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/3rdwimg.webp" class="img">Jump Suit &nbsp;&nbsp;&#8377;600<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/4thwimg.jpg" class="img">Knee End Top &nbsp;&nbsp;&#8377;399<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/5thwimg.jpg" class="img">Knee Length Top &nbsp;&nbsp;&#8377;549<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/6thwimg.webp" class="img">Office Wear &nbsp;&nbsp;&#8377;699<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <!-- this is for fashionwear -->
+        <div class="display" id="display4">
+            <div class="sa1" value="sa1" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/fas1.jpg" class="img">Casual Wear &nbsp;&nbsp;&#8377;699<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/fas2.jpg" class="img">Flare Maxi Dress &nbsp;&nbsp;&#8377;459<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/fas3.jpg" class="img">Casual Wear &nbsp;&nbsp;&#8377;750<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/fas4.jpg" class="img">Beltz Sleeve Top &nbsp;&nbsp;&#8377;555<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;">
+                <img src="img/fas5.jpg" class="img">&nbsp;&nbsp;Casual Wear &nbsp;&nbsp;&#8377;445<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/fas6.jpg" class="img">Business Wear &nbsp;&nbsp;&#8377;899<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <!-- this is for jewellery -->
+        <div class="display" id="display5">
+            <div class="sa1" value="sa1" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/jew1.jpg" class="img">FancyChain & Sted&nbsp;&nbsp;&#8377;500<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/jew2.jpg" class="img">Traditional Chain Set &nbsp;&nbsp;&#8377;899<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/jew3.jpg" class="img">8Pieces of Sted &nbsp;&nbsp;&#8377;499<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/jew4.jpg" class="img">Modern Ring &nbsp;&nbsp;&#8377;399<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;">
+                <img src="img/jew5.jpg" class="img">&nbsp;&nbsp;Fancy Bangle &nbsp;&nbsp;&#8377;699<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/jew6.jpg" class="img">Chain Set &nbsp;&nbsp;&#8377;499<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <!-- this is for cosmetics -->
+        <div class="display" id="display6">
+            <div class="sa1" value="sa1" style="margin-top: 10px; margin-left: 10px;float: left;text-align: center;">
+            <img src="img/cos1.jpg" class="img">Leather Bag &nbsp;&nbsp;&#8377;799<br><br>&emsp;
+            <button type="text"><a href="#">Add Cart</a></button>
+            <button type="text"><a href="Payments.html">Buy</a></button>
+        </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align:center;">
+                <img src="img/cos2.jpg" class="img">&nbsp;&nbsp;MakeUp Set &nbsp;&nbsp;&#8377;499<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/cos3.jpg" class="img">&nbsp;&nbsp;MakeUp Set &nbsp;&nbsp;&#8377;399<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/cos4.jpg" class="img">&nbsp;&nbsp;Face Wash &nbsp;&nbsp;&#8377;999<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px;text-align: center;">
+                <img src="img/cos5.jpg" class="img">Lip Balm &nbsp;&nbsp;&#8377;499<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>
+            <div class="sa1" style="float: left; margin-left: 10px;margin-top: 10px; text-align: center;">
+                <img src="img/cos6.jpg" class="img">Foundation Set &nbsp;&nbsp;&#8377;999<br><br>&emsp;
+                <button type="text"><a href="#">Add Cart</a></button>
+                <button type="text"><a href="Payments.html">Buy</a></button>
+            </div>    
+        </div>
+        <script src="userdetails.js"></script>
+<script>
+function myfunction()
+{
+    var sea=document.getElementById('search').value;
+    if(sea=="kurtis")
+    {
+        return show2();
+    }
+    if(sea=="saree")
+    {
+        return show1();
+    }
+    if(sea=="western")
+    {
+        return show3();
+    }
+    if(sea=="fash")
+    {
+        return show4();
+    }
+    if(sea=="jewell")
+    {
+        return show5();
+    }
+    if(sea=="cos")
+    {
+        return show6();
+    }
+}
+function show1()
+{
+    document.getElementById('display1').style.display ="block";
+    document.getElementById('display2').style.display ="none";
+    document.getElementById('display3').style.display ="none";
+    document.getElementById('display4').style.display ="none";
+    document.getElementById('display5').style.display ="none";
+    document.getElementById('display6').style.display ="none";
+}
+function show2()
+{
+    document.getElementById('display2').style.display ="block";
+    document.getElementById('display1').style.display ="none";
+    document.getElementById('display3').style.display ="none";
+    document.getElementById('display4').style.display ="none";
+    document.getElementById('display5').style.display ="none";
+    document.getElementById('display6').style.display ="none";
+}
+function show3()
+{
+    document.getElementById('display3').style.display ="block";
+    document.getElementById('display2').style.display ="none";
+    document.getElementById('display1').style.display ="none";
+    document.getElementById('display4').style.display ="none";
+    document.getElementById('display5').style.display ="none";
+    document.getElementById('display6').style.display ="none";
+}
+function show4()
+{
+    document.getElementById('display1').style.display ="none";
+    document.getElementById('display2').style.display ="none";
+    document.getElementById('display3').style.display ="none";
+    document.getElementById('display4').style.display ="block";
+    document.getElementById('display5').style.display ="none";
+    document.getElementById('display6').style.display ="none";
+}
+function show5()
+{
+    document.getElementById('display1').style.display ="none";
+    document.getElementById('display2').style.display ="none";
+    document.getElementById('display3').style.display ="none";
+    document.getElementById('display4').style.display ="none";
+    document.getElementById('display5').style.display ="block";
+    document.getElementById('display6').style.display ="none";
+}
+function show6()
+{
+    document.getElementById('display1').style.display ="none";
+    document.getElementById('display2').style.display ="none";
+    document.getElementById('display3').style.display ="none";
+    document.getElementById('display4').style.display ="none";
+    document.getElementById('display5').style.display ="none";
+    document.getElementById('display6').style.display ="block";
+}
+
+</script>
+</body>
+</html>

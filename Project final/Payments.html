@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .pay
+            {
+                width: 800px;
+                height: 1200px;
+                border: 1px solid brown;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                font-size: 50px;
+                background-color: lightgrey;
+            }
+            
+            input[type=text] {
+                width: 97%;
+                margin-bottom: 10px;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+
+            label {
+                margin-bottom: 5px;
+                display: block;
+                font-size: 13px;
+            }
+            .total
+            {
+                display: none;
+            }
+            .btn
+            {
+                width: 700px;
+                height: 40px;
+                background-color: lightgreen;
+                margin-left: 2px;
+                border-radius: 1cm;
+            }
+            .btn:hover
+            {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pay">Payment
+            <div class="billingaddress" style="font-size: 20px; text-align: left;"> Billing Address<br><br>
+                      <label for="fname">Full Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Enter your Name">
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" placeholder="Enter Your email">
+                      <label for="adr">Address</label>
+                      <input type="text" id="adr" name="address" placeholder="Enter Your Address">
+                      <label for="city">City</label>
+                      <input type="text" id="city" name="city" placeholder="Enter Your City">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="Enter Your State">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="Enter Your ZipCode">
+            </div>
+            <div class="payoption" style="font-size: 20px; text-align: left;">Payment<br><br>
+                <label for="fname" style="font-size: 19px;">Accepted Cards</label>
+                  <i class="fa fa-cc-visa" style="color:navy; font-size: 50px;"></i>
+                  <i class="fa fa-cc-amex" style="color:blue; font-size: 50px;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red; font-size: 50px;"></i>
+                  <i class="fa fa-cc-discover" style="color:orange; font-size: 50px;"></i><br>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="Enter name as in the card">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="Enter exp month">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="Enter exp Year">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="Enter Your CVV">
+            </div>
+            <button type="text" onclick="total()">Total Amount</button>
+            <div class="total" id="total" style="width: 800px; margin-left: 10px;">Your total expenditure is 1500</div><br>
+            <button class="pay1" id="pay1" style="width: 100px; margin-left: 10px;border-radius: 1cm;" onclick="paid()">Pay</button>
+            <input type="submit" value="Proceed to checkout" class="btn" onclick="output()">
+        </div>
+        <script src="userdetails.js">
+        </script>
+    </body>
+</html>
